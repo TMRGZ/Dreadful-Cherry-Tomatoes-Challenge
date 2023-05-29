@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "npm run generate:api",
     "start": "ng serve --host 0.0.0.0 --port 3000",
+    "prebuild": "npm run generate:api",
     "build": "ng build",
     "watch": "ng build --watch --browsers=ChromeHeadlessCI --configuration development",
     "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
-    "coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI"
+    "coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI",
+    "generate:api": "openapi-generator-cli generate"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.0.4"
+    "typescript": "~5.0.4",
+    "@openapitools/openapi-generator-cli": "^2.6.0"
   }
 }
