@@ -36,7 +36,7 @@ into [http://localhost:3000](http://localhost:3000).
 
 This skeleton is based on
 a [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) approach, so you
-could find the first basic elements: 
+could find the first basic elements:
 
 > You could [find here an amazing Dev.to article](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
 > explaining this Clean Architecture on frontend! (credits to [@bespoyasov_](https://twitter.com/bespoyasov_)).
