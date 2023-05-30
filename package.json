@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "prestart": "npm run generate:api",
+    "prestart": "yarn run generate:api",
     "start": "ng serve --host 0.0.0.0 --port 3000",
-    "prebuild": "npm run generate:api",
+    "prebuild": "yarn run generate:api",
     "build": "ng build",
     "watch": "ng build --watch --browsers=ChromeHeadlessCI --configuration development",
     "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
