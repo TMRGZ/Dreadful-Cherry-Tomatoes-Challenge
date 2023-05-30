@@ -18,7 +18,7 @@ import {MovieCoverComponent} from './components/movie-cover/movie-cover.componen
     CommonModule
   ],
   providers: [
-    { provide: 'DatasetControllerServiceInterface', useClass: DatasetControllerService }
+    {provide: 'DatasetControllerServiceInterface', useClass: DatasetControllerService}
   ]
 })
 export class MovieListModule {

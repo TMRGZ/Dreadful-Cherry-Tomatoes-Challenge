@@ -17,6 +17,6 @@ import {Movie} from './movie';
  */
 export interface Result {
   total?: number;
-  entries?: Array<Movie>;
+  entries?: Movie[];
 }
 
