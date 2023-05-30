@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {MovieListComponent} from './components/movie-list/movie-list.component';
 import {DatasetControllerService} from "../../../../gen";
 import {MovieCoverComponent} from './components/movie-cover/movie-cover.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {MovieCoverComponent} from './components/movie-cover/movie-cover.componen
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [
     {provide: 'DatasetControllerServiceInterface', useClass: DatasetControllerService}

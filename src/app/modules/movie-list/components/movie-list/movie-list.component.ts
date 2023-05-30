@@ -10,7 +10,9 @@ import {Movie} from "../../domain/model/movie";
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[] = []
+  movies: Movie[] = [];
+  filteredMovies: Movie[] = [];
+  searchTerm: string = '';
 
   constructor(private movieService: MovieService) {
   }
@@ -22,6 +24,11 @@ export class MovieListComponent implements OnInit {
   private loadMovies() {
     this.movieService.getMovies().subscribe((result: Result) => {
       this.movies = result.entries ?? [];
+      this.filteredMovies = this.movies
     })
+  }
+
+  applySearchFilter() {
+    this.filteredMovies = this.movies.filter((movie: Movie) => movie.title?.toLowerCase().includes(this.searchTerm.toLowerCase()))
   }
 }
