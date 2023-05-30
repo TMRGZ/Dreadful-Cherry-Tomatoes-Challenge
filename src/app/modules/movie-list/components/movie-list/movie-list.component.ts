@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../../service/movie.service";
-import {ResultDto} from "../../../../../../gen";
+import {Result} from "../../domain/model/result";
 
 @Component({
   selector: 'app-movie-list',
@@ -13,8 +13,8 @@ export class MovieListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.movieService.getMovies().subscribe((resultDto: ResultDto) => {
-      console.log(resultDto)
+    this.movieService.getMovies().subscribe((result: Result) => {
+      console.log(result)
     })
   }
 }
