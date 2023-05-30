@@ -23,9 +23,13 @@ export class MovieListComponent implements OnInit {
 
   private loadMovies() {
     this.movieService.getMovies().subscribe((result: Result) => {
-      this.movies = result.entries ?? [];
+      this.movies = this.sortMovies(result.entries!);
       this.filteredMovies = this.movies
     })
+  }
+
+  private sortMovies(unsortedMovies: Movie[]): Movie[] {
+    return unsortedMovies.sort((firstMovie, secondMovie) => secondMovie.releaseYear! - firstMovie.releaseYear!);
   }
 
   applySearchFilter() {
