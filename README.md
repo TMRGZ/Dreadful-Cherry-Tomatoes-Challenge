@@ -24,10 +24,12 @@ Here you could see the design of the movies pages:
 #### Considerations
 
 *
+
 Through [this Figma link (account required)](https://www.figma.com/file/OaRd9F0R43FQWTZQo6JO2Y/GW-867-Dreadful-Cherry-Tomatoes-challenge)
 or through [this ZIP](https://static.rviewer.io/challenges/assets/dreadful-cherry-tomatoes/assets.zip), you can download
 all the
 assets to start!
+
 * To obtain the data of the Movies, you have to
   request [this file](https://static.rviewer.io/challenges/datasets/dreadful-cherry-tomatoes/data.json)
 * Use SCSS or SASS to manage your stylesheets
