@@ -1,0 +1,63 @@
+.film-item {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.cover-image {
+  width: 100%;
+  height: 300px; /* Set the desired height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.title-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Set the desired initial height for the title */
+  overflow: hidden;
+  transition: height 0.3s;
+  z-index: 1;
+  display: flex;
+}
+
+.film-item:hover .title-box {
+  height: calc(50% + 100px); /* Expand the height to fit the expanded description, limited to a maximum of 50% of the image height */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 16px; /* Set the default font size for the title */
+  width: 100%; /* Match the width of the cover image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0; /* Remove the rounded corners */
+}
+
+.card-title {
+  font-size: 16px; /* Set the default font size for the title */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  display: none;
+  font-size: 14px; /* Set the default font size for the description */
+}
+
+.film-item:hover .card-text {
+  display: block;
+}
+

@@ -1,12 +1,14 @@
-<div class="movie-cover">
-  <div class="card">
-    <img [src]="movie.images?.posterArt?.url" alt="" class="card-img-top img-fluid">
-    <div class="card-title">
-      <b>{{movie.title}}</b>
+<div class="film-item">
+  <div class="cover-container">
+    <img [src]="movie.images?.posterArt?.url" alt="Film Cover" class="cover-image">
+    <div class="title-box card">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <div class="card-text">
+          <p>{{ movie.releaseYear }}</p>
+          <p>{{ movie.description }}</p>
+        </div>
+      </div>
     </div>
-    <p class="card-subtitle">{{movie.releaseYear}}</p>
-    <p class="card-body">{{movie.description}}</p>
-
   </div>
-
 </div>
