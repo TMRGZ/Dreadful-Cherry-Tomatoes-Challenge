@@ -1,6 +1,12 @@
-<div class="container">
-  <div class="text-center">
-    <input (input)="applySearchFilter()" [(ngModel)]="searchTerm" placeholder="Title" type="text"/>
+<div class="navbar-dark bg-danger">
+  <div class="container">
+    <div class="text-center search-bar-container">
+      <div class="search-bar-icon">
+        <span class="search-logo"></span>
+
+      </div>
+      <input (input)="applySearchFilter()" [(ngModel)]="searchTerm" class="search-bar" placeholder="Title" type="text"/>
+    </div>
   </div>
 </div>
 
