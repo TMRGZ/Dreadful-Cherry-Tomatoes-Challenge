@@ -12,7 +12,11 @@ export class MovieListComponent implements OnInit {
 
   movies: Movie[] = [];
   filteredMovies: Movie[] = [];
+
   searchTerm: string = '';
+
+  page: number = 1;
+  pageSize: number = 10;
 
   constructor(private movieService: MovieService) {
   }
@@ -34,5 +38,9 @@ export class MovieListComponent implements OnInit {
 
   applySearchFilter() {
     this.filteredMovies = this.movies.filter((movie: Movie) => movie.title?.toLowerCase().includes(this.searchTerm.toLowerCase()))
+  }
+
+  applyPagination(movieList: Movie[]): Movie[] {
+    return movieList.slice((this.page - 1) * this.pageSize, this.page * this.pageSize);
   }
 }
