@@ -3,16 +3,17 @@
     <div class="text-center search-bar-container">
       <div class="search-bar-icon">
         <span class="search-logo"></span>
-
       </div>
       <input (input)="applySearchFilter()" [(ngModel)]="searchTerm" class="search-bar" placeholder="Title" type="text"/>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container py-3">
   <h3 class="text-white">Popular Movies</h3>
+</div>
 
+<div class="container">
   <div class="row">
     <div *ngFor="let movie of applyPagination(filteredMovies)" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
       <app-movie-cover [movie]="movie"/>
@@ -20,7 +21,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container py-3">
   <div class="d-flex justify-content-center">
     <ngb-pagination [(page)]="page" [collectionSize]="filteredMovies.length" [pageSize]="pageSize"></ngb-pagination>
   </div>
