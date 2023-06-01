@@ -27,7 +27,7 @@ export class MovieListComponent implements OnInit {
 
   private loadMovies() {
     this.movieService.getMovies().subscribe((result: Result) => {
-      this.movies = this.sortMovies(result.entries!);
+      this.movies = this.sortMovies(result.entries);
       this.filteredMovies = this.movies
     })
   }
