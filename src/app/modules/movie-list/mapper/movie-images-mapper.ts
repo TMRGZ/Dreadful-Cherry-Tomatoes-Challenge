@@ -13,7 +13,7 @@ export class MovieImagesMapper {
 
   mapDtoToDomain(dto?: MovieImagesDto): MovieImages {
     return {
-      posterArt: this.imageMapper.mapDtoToDomain(dto?.posterArt!),
+      posterArt: this.imageMapper.mapDtoToDomain(dto?.posterArt),
     };
   }
 }

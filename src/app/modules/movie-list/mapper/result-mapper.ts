@@ -13,11 +13,9 @@ export class ResultMapper {
   }
 
   mapDtoToDomain(dto: ResultDto): Result {
-    const entriesDto = dto.entries ?? [];
-
     return {
       total: dto.total,
-      entries: this.movieMapper.mapDtoListToDomain(entriesDto)
+      entries: this.movieMapper.mapDtoListToDomain(dto.entries)
     };
   }
 }
