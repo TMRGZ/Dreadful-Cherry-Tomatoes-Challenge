@@ -12,8 +12,7 @@
           "modelSuffix": "Dto",
           "modelFileSuffix": "Dto",
           "npmName": "restClient",
-          "supportsES6": "true",
-          "withInterfaces": true
+          "supportsES6": "true"
         }
       }
     }

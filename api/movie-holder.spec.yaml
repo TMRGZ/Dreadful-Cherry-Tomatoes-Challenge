@@ -32,6 +32,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Movie'
+      required:
+        - total
+        - entries
     Movie:
       description: 'Movie'
       type: object

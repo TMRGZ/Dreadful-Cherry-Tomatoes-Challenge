@@ -16,7 +16,7 @@ import {Movie} from './movie';
  * Result of the query
  */
 export interface Result {
-  total?: number;
-  entries?: Movie[];
+  total: number;
+  entries: Movie[];
 }
 

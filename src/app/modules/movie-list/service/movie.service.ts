@@ -1,5 +1,5 @@
-import {Inject, Injectable} from '@angular/core';
-import {DatasetControllerServiceInterface, ResultDto} from "../../../../../gen";
+import {Injectable} from '@angular/core';
+import {DatasetControllerService, ResultDto} from "../../../../../gen";
 import {map, Observable} from "rxjs";
 import {ResultMapper} from "../mapper/result-mapper";
 import {Result} from "../domain/model/result";
@@ -9,7 +9,7 @@ import {Result} from "../domain/model/result";
 })
 export class MovieService {
 
-  constructor(@Inject('DatasetControllerServiceInterface') private datasetControllerService: DatasetControllerServiceInterface,
+  constructor(private datasetControllerService: DatasetControllerService,
               private resultMapper: ResultMapper) {
   }
 
