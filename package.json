@@ -8,6 +8,7 @@
     "prebuild": "yarn run generate:api",
     "build": "ng build",
     "watch": "ng build --watch --browsers=ChromeHeadlessCI --configuration development",
+    "pretest": "yarn run generate:api",
     "test": "ng test --no-watch --browsers=ChromeHeadlessCI",
     "coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI",
     "generate:api": "openapi-generator-cli generate"
