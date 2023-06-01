@@ -1,0 +1,14 @@
+<div class="film-item">
+  <div class="cover-container">
+    <img [src]="movie.images?.posterArt?.url" alt="Film Cover" class="cover-image">
+    <div class="title-box card">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <div class="card-text">
+          <p>{{ movie.releaseYear }}</p>
+          <p>{{ movie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

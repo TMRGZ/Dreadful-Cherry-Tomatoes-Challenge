@@ -1,0 +1,62 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: Challenges Dataset API
+servers:
+  - url: 'https://static.rviewer.io/'
+paths:
+  /challenges/datasets/dreadful-cherry-tomatoes/data.json:
+    get:
+      operationId: get-data
+      summary: Get dataset data
+      tags:
+        - Dataset Controller
+      responses:
+        '304':
+          description: Data received
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+
+components:
+  schemas:
+    Result:
+      description: 'Result of the query'
+      type: object
+      properties:
+        total:
+          type: number
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Movie'
+      required:
+        - total
+        - entries
+    Movie:
+      description: 'Movie'
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        images:
+          type: object
+          properties:
+            posterArt:
+              $ref: '#/components/schemas/Image'
+        releaseYear:
+          type: number
+    Image:
+      description: 'Image'
+      type: object
+      properties:
+        url:
+          type: string
+        width:
+          type: number
+        height:
+          type: number

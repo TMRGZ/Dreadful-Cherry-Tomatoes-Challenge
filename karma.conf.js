@@ -28,7 +28,7 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage/skeleton-ts-angular'),
       subdir: '.',
       reporters: [
-        { type: 'lcov' },
+        {type: 'lcov'},
       ]
     },
     reporters: ['progress', 'kjhtml'],
